@@ -1,3 +1,5 @@
+
+
 import * as vscode from 'vscode';
 import {hero_word} from './hero_word';
 
@@ -12,9 +14,13 @@ export  function myHero(){
     }
     let document = editor.document;
     let selection = editor.selection;
-    
+    let position = selection.active;
+    if (!selection.isEmpty) {
+        // the Position object gives you the line and character where the cursor is
+        position = new vscode.Position(document.lineCount, 0);
+      }
     editor.edit(editBuilder =>{
-        editBuilder.insert(new vscode.Position(document.lineCount, 0), sayings);
+        editBuilder.insert(position, sayings);
     }); 
     
 }

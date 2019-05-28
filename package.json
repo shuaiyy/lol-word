@@ -35,5 +35,9 @@
 		"@types/node": "^10.12.21",
 		"@types/mocha": "^2.2.42"
 	},
-	"publisher": "shuaiyy2358"
+	"publisher": "shuaiyy2358",
+	"repository":{
+		"type": "git",
+		"url": "https://github.com/shuaiyy/lol-word"
+	}
 }
